@@ -1,0 +1,25 @@
+<h3 class="texxt-center">Formulario 3</h3>
+<form [formGroup]="form3" (submit)="enviar()">
+    <div class="form-group">
+        <label for="modelo">Modelo</label>
+        <input formControlName="modelo" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="marca">Marca</label>
+        <input formControlName="marca" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="color">Color</label>
+        <input formControlName="color" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input formControlName="fecha" class="form-control" type="number">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" 
+        type="submit"
+        [disabled]="!form3.valid"
+        >Enviar</button>
+    </div>
+</form>

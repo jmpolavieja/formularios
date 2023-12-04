@@ -1,0 +1,48 @@
+<form [formGroup]="fUser" class="w-50 m-auto" (submit)="enviar()">
+  <h4 class="text-center">Ficha de usuario</h4>
+  <div class="input-group mb-3 shadow">
+    <span class="input-group-text" id="basic-addon1">Nombre</span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nombre"
+      aria-label="Nombre"
+      aria-describedby="basic-addon1"
+      formControlName="nombre"
+    />
+  </div>
+  <div class="input-group mb-3 shadow">
+    <span class="input-group-text" id="basic-addon1">Apellidos</span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Apellidos"
+      aria-label="Apellidos"
+      aria-describedby="basic-addon1"
+      formControlName="apellidos"
+    />
+  </div>
+  <div class="input-group mb-3 shadow">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="email"
+      aria-label="email"
+      aria-describedby="basic-addon1"
+      formControlName="email"
+    />
+  </div>
+  <div class="input-group mb-3 shadow">
+    <span class="input-group-text" id="basic-addon1">DNI</span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="DNI"
+      aria-label="DNI"
+      aria-describedby="basic-addon1"
+      formControlName="dni"
+    />
+  </div>
+  <button class="btn btn-secondary" type="submit" [disabled]="!fUser.valid">Enviar</button>
+</form>
